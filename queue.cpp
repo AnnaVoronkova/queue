@@ -20,7 +20,6 @@ public:
     int peek();
 
     int size();
-    int new_size;
     bool isEmpty();
     bool isFull();
 
@@ -41,7 +40,7 @@ void myQueue::push (int x){
           int *new_arr = nullptr;
       }else{
          cout << "Inserting " << x << endl;
-         new_arr = new int [new_size];
+         new_arr = new int [++capacity];
          for (int i=0; i<x; ++i){
             new_arr[i] = arr[i];
          }
